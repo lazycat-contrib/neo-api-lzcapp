@@ -1,0 +1,17 @@
+version: '3.4'
+
+services:
+  new-api:
+    image: pengzhile/new-api:latest
+    container_name: newapi
+    restart: always
+    command: --log-dir /app/logs
+    ports:
+      - "3300:3000"
+    volumes:
+      - ./data/new-api:/data
+      - ./logs:/app/logs
+      - ./data/new-api/cache:/data/cache
+    environment:
+      - TZ=Asia/Shanghai
+      - TIKTOKEN_CACHE_DIR=/data/cache
