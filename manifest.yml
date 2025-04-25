@@ -19,7 +19,7 @@ application:
 services:
   neo-api:
     container_name: neo-api
-    image: docker.hlmirror.com/pengzhile/new-api:v1.4.2
+    image: docker.1ms.run/pengzhile/new-api:v1.4.2
     environment:
       - TZ=Asia/Shanghai
       - TIKTOKEN_CACHE_DIR=/data/cache
