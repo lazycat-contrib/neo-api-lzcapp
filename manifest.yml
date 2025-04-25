@@ -26,7 +26,7 @@ services:
     command: --log-dir /app/logs
     binds:
       - /lzcapp/var/data:/data
-      - /lzcapp/cache:/app/logs
+      - /lzcapp/var/logs:/app/logs
       - /lzcapp/var/cache:/data/cache
 
 unsupported_platforms:
