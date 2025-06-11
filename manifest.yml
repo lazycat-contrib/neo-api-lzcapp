@@ -1,17 +1,13 @@
 lzc-sdk-version: "0.1"
 name: Neo API
 package: cloud.lazycat.app.neoapi
-version: 1.4.2
+version: 1.5.2
 description: new-api LINUX DO 魔改版
 homepage: https://hub.docker.com/r/pengzhile/new-api
 author: pengzhile
 application:
   subdomain: neoapi
   background_task: true
-  multi_instance: false
-  gpu_accel: false
-  kvm_accel: false
-  usb_accel: false
   public_path:
     - /
   routes:
@@ -19,7 +15,7 @@ application:
 services:
   neo-api:
     container_name: neo-api
-    image: docker.1ms.run/pengzhile/new-api:v1.4.2
+    image: docker.1ms.run/pengzhile/new-api:v1.5.2
     environment:
       - TZ=Asia/Shanghai
       - TIKTOKEN_CACHE_DIR=/data/cache
@@ -29,6 +25,8 @@ services:
       - /lzcapp/var/logs:/app/logs
       - /lzcapp/var/cache:/data/cache
 
+
+    
 unsupported_platforms:
   - ios
   - android
