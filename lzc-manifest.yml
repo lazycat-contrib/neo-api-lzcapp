@@ -1,0 +1,21 @@
+application:
+  subdomain: neoapi
+  background_task: true
+  public_path:
+    - /
+  upstreams:
+    - location: /
+      backend: http://neo-api:3000/
+
+services:
+  neo-api:
+    # pengzhile/new-api:v1.5.10
+    image: registry.lazycat.cloud/czyt/pengzhile/new-api:4c982786c6118b42
+    environment:
+      - TZ=Asia/Shanghai
+      - TIKTOKEN_CACHE_DIR=/data/cache
+    command: --log-dir /app/logs
+    binds:
+      - /lzcapp/var/data:/data
+      - /lzcapp/var/logs:/app/logs
+      - /lzcapp/var/cache:/data/cache
