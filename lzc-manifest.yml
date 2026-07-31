@@ -13,9 +13,13 @@ services:
     image: registry.lazycat.cloud/czyt/pengzhile/new-api:5d8328a4cdba0f9e
     environment:
       - TZ=Asia/Shanghai
-      - TIKTOKEN_CACHE_DIR=/data/cache
-    command: --log-dir /app/logs
+      - ALL_PROXY=
+      - SESSION_SECRET={{ stable_secret "neo@session" }}
     binds:
       - /lzcapp/var/data:/data
-      - /lzcapp/var/logs:/app/logs
-      - /lzcapp/var/cache:/data/cache
+
+    depends_on:
+      - redis
+
+  redis:
+    image: registry.lazycat.cloud/czyt/library/redis:084c4dbb68f32013
