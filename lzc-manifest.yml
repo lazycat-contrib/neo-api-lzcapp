@@ -15,6 +15,7 @@ services:
       - TZ=Asia/Shanghai
       - ALL_PROXY=
       - SESSION_SECRET={{ stable_secret "neo@session" }}
+      - REDIS_CONN_STRING=redis://redis
     binds:
       - /lzcapp/var/data:/data
 
