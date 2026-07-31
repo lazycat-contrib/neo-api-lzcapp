@@ -9,8 +9,8 @@ application:
 services:
   neo-api:
     # pengzhile/new-api:v1.5.10
-    # upstream: docker.io/pengzhile/new-api:2026.3.20
-    image: registry.lazycat.cloud/czyt/pengzhile/new-api:64b0430c06976a98
+    # upstream: docker.io/pengzhile/new-api:2026.3.21
+    image: registry.lazycat.cloud/czyt/pengzhile/new-api:5d8328a4cdba0f9e
     environment:
       - TZ=Asia/Shanghai
       - TIKTOKEN_CACHE_DIR=/data/cache
