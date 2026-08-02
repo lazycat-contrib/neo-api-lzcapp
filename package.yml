@@ -1,5 +1,5 @@
 package: cloud.lazycat.app.neoapi
-version: 2026.3.21
+version: 2026.3.22
 name: Neo API
 description: new-api LINUX DO 魔改版
 min_os_version: 1.5.0
