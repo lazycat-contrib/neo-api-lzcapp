@@ -9,8 +9,8 @@ application:
 services:
   neo-api:
     # pengzhile/new-api:v1.5.10
-    # upstream: docker.io/pengzhile/new-api:2026.3.22
-    image: registry.lazycat.cloud/czyt/pengzhile/new-api:ae6363a3fa4474cf
+    # upstream: docker.io/pengzhile/new-api:2026.3.24
+    image: registry.lazycat.cloud/czyt/pengzhile/new-api:71a62d862d7eed83
     environment:
       - TZ=Asia/Shanghai
       - ALL_PROXY=
